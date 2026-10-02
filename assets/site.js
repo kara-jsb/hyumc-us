@@ -54,5 +54,19 @@
   b.insertAdjacentHTML('afterbegin',sprite+head);
   b.insertAdjacentHTML('beforeend',foot);
   window.icon=ic;
+  /* 우측 빠른 메뉴 (PC 1320px 이상) + 맨 위로 버튼 */
+  var up='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var fab='<aside class="fab" aria-label="빠른 메뉴"><button type="button" class="fab-top"><span class="up">'+up+'</span>TOP</button>'+
+    '<a href="'+root+'prep/">'+ic('i-check')+'유의사항</a>'+
+    '<a href="'+root+'location/">'+ic('i-floor')+'초음파실<br>위치</a>'+
+    '<a href="'+root+'directions/">'+ic('i-pin')+'오시는 길</a>'+
+    '<a href="tel:0222908114">'+ic('i-phone')+'전화문의</a></aside>'+
+    '<button type="button" class="totop" aria-label="맨 위로">'+up+'</button>';
+  b.insertAdjacentHTML('beforeend',fab);
+  function toTop(){window.scrollTo({top:0,behavior:'smooth'});}
+  [].forEach.call(document.querySelectorAll('.fab-top,.totop'),function(e){e.addEventListener('click',toTop);});
+  var tt=document.querySelector('.totop');
+  function onScroll(){tt.classList.toggle('show',window.scrollY>300);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   document.querySelectorAll('[data-i]').forEach(function(e){e.insertAdjacentHTML('afterbegin',ic(e.getAttribute('data-i')));});
 })();

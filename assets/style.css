@@ -561,3 +561,21 @@ body[data-page=exam] .sp .card>p{line-height:1.8}
   .prep td:last-child{padding:18px 20px 20px;font-size:16px;line-height:1.75}
   .prep td b{color:var(--navy)}
 }
+
+/* ===== v14: 우측 빠른 메뉴 ===== */
+.fab{display:none;position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:25;width:88px;background:#fff;border:2px solid #dde5f0;border-radius:16px;box-shadow:0 8px 24px rgba(20,48,116,.14);padding:4px 0}
+.fab a,.fab button{display:flex;flex-direction:column;align-items:center;gap:7px;width:100%;padding:15px 4px;font:inherit;font-size:13.5px;line-height:1.25;color:#444;text-decoration:none;text-align:center;background:none;border:0;border-bottom:1px solid #e6ebf2;cursor:pointer}
+.fab>:last-child{border-bottom:0}
+.fab .ic{font-size:30px;color:var(--blue);--acc:#fff}
+.fab a:hover,.fab button:hover{color:var(--blue)}
+.fab .up{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#e4ecf8;color:var(--navy)}
+.totop{position:fixed;right:18px;bottom:24px;z-index:25;width:46px;height:46px;border-radius:50%;border:0;background:var(--navy);color:#fff;box-shadow:0 4px 14px rgba(20,48,116,.3);display:none;place-items:center;cursor:pointer}
+.totop.show{display:grid}
+@media(min-width:1320px){.fab{display:block}.totop{display:none!important}}
+@media(max-width:640px){.totop{bottom:78px;right:14px;width:42px;height:42px}}
+
+/* ===== v15: 유의사항 표 머리글·종류 열 가운데 정렬 (PC) ===== */
+@media(min-width:641px){
+  .prep th{text-align:center}
+  .prep td:first-child{text-align:center;width:220px}
+}
