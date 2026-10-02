@@ -27,7 +27,7 @@
   var nav=items.map(function(i){
     return '<a href="'+(root+i[2]||'./')+'"'+(i[0]===cur?' aria-current="page"':'')+'>'+ic(i[3])+i[1]+'</a>';
   }).join('');
-  var head='<div class="draft">초안(Draft) · <span class="tbc">확인 필요</span> 표시 항목은 부서 확인 후 확정해주세요</div>'+
+  var head=''+
   '<header class="top"><div class="top-in"><a href="'+(root||'./')+'"><img class="logo" src="'+root+'img/logo.png" alt="한양대학교병원"></a>'+
   '<div class="dept"><div class="d-t"><b>영상의학과 초음파실</b><small>ULTRASOUND ROOM</small></div></div>'+
   '<a class="tel" href="tel:0222908114">'+ic('i-phone')+'02-2290-8114</a></div>'+

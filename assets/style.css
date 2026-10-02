@@ -590,3 +590,7 @@ body[data-page=exam] .sp .card>p{line-height:1.8}
   .prep tr,.prep tr:nth-child(n){--hd:#4a6fae}
   .prep tr{border-color:#d9e3f0}
 }
+
+/* ===== v18: 검사안내 카드 제목 색 통일(연한 톤) ===== */
+body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#4a6fae}
+body[data-page=exam] .sp .card{border-color:#d9e3f0}
