@@ -13,6 +13,12 @@
   '<symbol id="i-subway" viewBox="0 0 48 48"><rect x="9" y="4" width="30" height="32" rx="7"/><rect class="a" x="14" y="10" width="20" height="10" rx="2"/><circle class="a" cx="17" cy="28" r="2.5"/><circle class="a" cx="31" cy="28" r="2.5"/><path d="M13 44l5-7h12l5 7h-4l-1-2H18l-1 2z"/></symbol>'+
   '<symbol id="i-bus" viewBox="0 0 48 48"><rect x="6" y="7" width="36" height="30" rx="5"/><rect class="a" x="10" y="12" width="28" height="11"/><circle class="a" cx="15" cy="30" r="2.5"/><circle class="a" cx="33" cy="30" r="2.5"/><rect x="11" y="37" width="6" height="6"/><rect x="31" y="37" width="6" height="6"/></symbol>'+
   '<symbol id="i-car" viewBox="0 0 48 48"><path d="M10 20l4-10h20l4 10h3a2 2 0 0 1 2 2v13H5V22a2 2 0 0 1 2-2z"/><path class="a" d="M16 14h16l2 6H14z"/><circle class="a" cx="14" cy="28" r="2.5"/><circle class="a" cx="34" cy="28" r="2.5"/></symbol>'+
+  '<symbol id="i-receipt" viewBox="0 0 48 48"><path d="M10 4h28v40l-5-3-5 3-4-3-4 3-5-3-5 3z"/><path class="a" d="M16 14h16v3H16zm0 8h16v3H16zm0 8h10v3H16z"/></symbol>'+
+  '<symbol id="i-probe" viewBox="0 0 48 48"><rect x="17" y="3" width="14" height="25" rx="5"/><path class="a" d="M19.5 11h9v4h-9z"/><path d="M9 33a22 22 0 0 1 30 0l-3 3a17.5 17.5 0 0 0-24 0z"/><path d="M16 40a12 12 0 0 1 16 0l-3 3a7.5 7.5 0 0 0-10 0z"/></symbol>'+
+  '<symbol id="i-report" viewBox="0 0 48 48"><rect x="8" y="4" width="30" height="40" rx="3"/><path class="a" d="M14 14h18v3H14zm0 8h18v3H14z"/><circle class="a" cx="36" cy="36" r="9"/><path class="s2" d="M32 36l3 3 5-6"/></symbol>'+
+  '<symbol id="i-shield" viewBox="0 0 48 48"><path d="M24 3l17 6v12c0 12-8 20-17 24C15 41 7 33 7 21V9z"/><path class="a" d="M16.5 24l5 5 10.5-11.5-3-3-7.5 8.5-2-2z"/></symbol>'+
+  '<symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 43S5 31 5 17a9.5 9.5 0 0 1 19-4 9.5 9.5 0 0 1 19 4c0 14-19 26-19 26z"/></symbol>'+
+  '<symbol id="i-live" viewBox="0 0 48 48"><rect x="4" y="7" width="40" height="29" rx="4"/><path d="M15 44h18v-3H15z"/><path class="s" d="M9 22h7l4-8 6 16 4-8h9"/></symbol>'+
   '</defs></svg>';
   function ic(id){return '<svg class="ic" aria-hidden="true"><use href="#'+id+'"/></svg>';}
   var items=[['home','홈','','i-home'],['exam','검사안내','exam/','i-exam'],['prep','유의사항','prep/','i-check'],['faq','FAQ','faq/','i-faq'],['location','위치','location/','i-floor'],['directions','오시는 길','directions/','i-pin']];
