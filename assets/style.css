@@ -682,3 +682,14 @@ nav.tabs a[aria-current=page]{background:none;border-bottom-color:var(--blue)}
 .tile b{font-weight:700}
 .tile .ti{border:1px solid #cfdcec;background:#f5f9fe;color:var(--blue);--acc:#f5f9fe;border-radius:4px}
 .tile:hover .ti{background:#eaf3fd;border-color:var(--blue)}
+
+/* ===== v29: 검사안내 + 유의사항 통합 ===== */
+.common-notice{background:#fff;border:1px solid #cfdcec;border-left:5px solid #0657a5;border-radius:8px;padding:8px 26px;box-shadow:0 2px 10px rgba(20,48,116,.05)}
+.common-notice ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.common-notice li{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #e6edf5}
+.common-notice li:nth-last-child(-n+2){border-bottom:0}
+.common-notice .ci{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:#e7f1fa;color:var(--blue);font-size:26px;--acc:#e7f1fa}
+.common-notice b{display:block;color:var(--navy);font-size:17px}
+.common-notice small{display:block;color:var(--sub);font-size:14.5px;line-height:1.5}
+@media(max-width:900px){.common-notice ul{grid-template-columns:1fr}.common-notice li:nth-last-child(2){border-bottom:1px solid #e6edf5}}
+@media(max-width:640px){.common-notice{padding:4px 18px}.common-notice li{padding:14px 0;gap:14px}.common-notice b{font-size:16px}.common-notice small{font-size:13.5px}.common-notice .ci{width:42px;height:42px;font-size:23px}}

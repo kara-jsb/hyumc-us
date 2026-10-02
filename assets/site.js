@@ -23,7 +23,7 @@
   '<symbol id="i-baby" viewBox="0 0 48 48"><circle cx="5.5" cy="27" r="3.5"/><circle cx="42.5" cy="27" r="3.5"/><circle cx="24" cy="26" r="19"/><circle class="a" cx="17" cy="26" r="2.6"/><circle class="a" cx="31" cy="26" r="2.6"/><path class="s" d="M18.5 33.5c3.2 3 7.8 3 11 0"/><path class="s" d="M19 7.5c1.2-3.2 5-4.4 7-2.2 1.2 1.3.8 3.2-.6 4"/></symbol>'+
   '</defs></svg>';
   function ic(id){return '<svg class="ic" aria-hidden="true"><use href="#'+id+'"/></svg>';}
-  var items=[['home','홈','','i-home'],['exam','검사안내','exam/','i-exam'],['prep','유의사항','prep/','i-check'],['faq','FAQ','faq/','i-faq'],['location','위치','location/','i-floor'],['directions','오시는 길','directions/','i-pin']];
+  var items=[['home','홈','','i-home'],['exam','검사안내','exam/','i-exam'],['faq','FAQ','faq/','i-faq'],['location','위치','location/','i-floor'],['directions','오시는 길','directions/','i-pin']];
   var nav=items.map(function(i){
     return '<a href="'+(root+i[2]||'./')+'"'+(i[0]===cur?' aria-current="page"':'')+'>'+ic(i[3])+i[1]+'</a>';
   }).join('');
@@ -57,7 +57,7 @@
   /* 우측 빠른 메뉴 (PC 1320px 이상) + 맨 위로 버튼 */
   var up='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var fab='<aside class="fab" aria-label="빠른 메뉴"><button type="button" class="fab-top"><span class="up">'+up+'</span>TOP</button>'+
-    '<a href="'+root+'prep/">'+ic('i-check')+'유의사항</a>'+
+    '<a href="'+root+'exam/">'+ic('i-exam')+'검사안내</a>'+
     '<a href="'+root+'location/">'+ic('i-floor')+'초음파실<br>위치</a>'+
     '<a href="'+root+'directions/">'+ic('i-pin')+'오시는 길</a>'+
     '<a href="tel:0222908114">'+ic('i-phone')+'전화문의</a></aside>'+
