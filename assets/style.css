@@ -650,3 +650,26 @@ body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#143074}
   .prep td:last-child{background:#fff}
   body[data-page=exam] .sp .card{background:#fff;border:1px solid #d3e0ec;box-shadow:0 2px 10px rgba(20,48,116,.06)}
 }
+
+/* ===== v27: 로고 줄 배경색(네이비)·메뉴 줄 흰색 복원, 모바일 홈 반전 ===== */
+.top-in{background:#143074;box-shadow:0 0 0 100vmax #143074;clip-path:inset(0 -100vmax)}
+.top .dept{border-left-color:rgba(255,255,255,.3)}
+.top .dept b{color:#fff}
+.top .dept small{color:#8fd0ff}
+.top .tel{background:#fff;color:#143074}
+.top .tel .ic{color:#143074;--acc:#fff}
+nav.tabs{background:#fff;box-shadow:none;clip-path:none}
+nav.tabs a:hover{background:#f1f6fc}
+nav.tabs a[aria-current=page]{background:none;border-bottom-color:var(--blue)}
+@media(min-width:641px){nav.tabs::before{content:none}}
+.top{border-bottom:1px solid #dbe3ee}
+
+@media(max-width:640px){
+  .band{background:#fff;padding:28px 0 36px}
+  .band-h{color:var(--navy)}
+  .infocard{border:1px solid #d9e3ef;box-shadow:0 2px 10px rgba(20,48,116,.06)}
+  .tile{color:var(--navy)}
+  .tile b{font-weight:700}
+  .tile .ti{border:1px solid #cfdcec;background:#f5f9fe;color:var(--blue);--acc:#f5f9fe}
+  .tile:hover .ti{background:#eaf3fd;border-color:var(--blue)}
+}

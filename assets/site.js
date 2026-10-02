@@ -28,7 +28,7 @@
     return '<a href="'+(root+i[2]||'./')+'"'+(i[0]===cur?' aria-current="page"':'')+'>'+ic(i[3])+i[1]+'</a>';
   }).join('');
   var head=''+
-  '<header class="top"><div class="top-in"><a href="'+(root||'./')+'"><img class="logo" src="'+root+'img/logo.png" alt="한양대학교병원"></a>'+
+  '<header class="top"><div class="top-in"><a href="'+(root||'./')+'"><img class="logo" src="'+root+'img/logo_w.png" alt="한양대학교병원"></a>'+
   '<div class="dept"><div class="d-t"><b>영상의학과 초음파실</b><small>ULTRASOUND ROOM</small></div></div>'+
   '<a class="tel" href="tel:0222908114">'+ic('i-phone')+'02-2290-8114</a></div>'+
   '<nav class="tabs" aria-label="메뉴">'+nav+'</nav></header>';
