@@ -634,3 +634,11 @@ body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#1f62ae}
   .ex-sum{background:#e3f0fd}
   .intro{background:linear-gradient(100deg,#dcecfc,#eef6ff);border-color:#9fc4ec}
 }
+
+/* ===== v25: 메뉴 줄에 배경색을 넣어 로고 줄과 구분 (PC) ===== */
+@media(min-width:641px){
+  nav.tabs{background:#e9f1fb;box-shadow:0 0 0 100vmax #e9f1fb;clip-path:inset(0 -100vmax)}
+  nav.tabs a{font-weight:500}
+  nav.tabs a:hover{background:rgba(255,255,255,.55)}
+  nav.tabs a[aria-current=page]{background:#fff;border-bottom-color:var(--blue)}
+}
