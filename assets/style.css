@@ -612,3 +612,9 @@ body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#1f62ae}
 @media(max-width:640px){
   .prep tr,.prep tr:nth-child(n){--hd:#1f62ae}
 }
+
+/* ===== v22: 로고 줄과 메뉴 줄 사이 구분선을 화면 전체 폭으로 ===== */
+@media(min-width:641px){
+  nav.tabs{border-top:0;position:relative}
+  nav.tabs::before{content:"";position:absolute;left:50%;top:0;width:100vw;height:1px;transform:translateX(-50%);background:#b8c6da}
+}
