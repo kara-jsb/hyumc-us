@@ -420,3 +420,73 @@ footer.ft{background:#2f3746;color:#c9d0dc;padding:0;font-size:15px}
   .step{padding:16px 14px}
   .step .si{position:static;width:40px;height:40px;font-size:22px;margin-bottom:10px}
 }
+
+/* ===== v5 ===== */
+.intro{padding:30px 36px;border-left:6px solid var(--blue)}
+.intro-t h3{font-size:25px}
+.step{padding:26px 24px}
+.step p span{display:block;white-space:nowrap}
+.step p{margin-top:2px}
+.step .si{width:52px;height:52px;font-size:28px;right:20px;top:22px}
+@media(max-width:1000px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.step{padding-right:24px}}
+@media(max-width:640px){
+  .intro{padding:22px 20px;border-left-width:5px}
+  .step p span{white-space:normal}
+  .step{padding:16px 14px}
+  .step .si{position:static;width:40px;height:40px;font-size:22px;margin-bottom:10px}
+}
+
+/* ===== v6 ===== */
+/* 검사 요약 박스 (오시는 길 상단 정보와 동일 스타일) */
+.ex-sum{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px 36px;padding:24px 30px;background:var(--bg);border-radius:6px;align-items:center;margin-bottom:28px}
+.ex-sum>div{display:flex;align-items:center;flex-wrap:wrap;gap:6px 0}
+.ex-sum span.k{background:var(--navy);color:#fff;font-size:13px;border-radius:3px;padding:2px 10px;margin-right:12px;white-space:nowrap}
+.ex-sum b{font-size:18px}
+.ex-sum>div:nth-child(1) b{color:var(--navy)}
+.ex-sum>div:nth-child(2) b{color:var(--blue)}
+.ex-sum>div:nth-child(3) b{color:#0b8dd9}
+
+/* 검사 부위 카드: 제목 영역을 톤으로 구분 */
+body[data-page=exam] .sp .grid{align-items:stretch!important}
+body[data-page=exam] .sp .grid>.card:nth-child(1){--hd:#143074}
+body[data-page=exam] .sp .grid>.card:nth-child(2){--hd:#0657a5}
+body[data-page=exam] .sp .grid>.card:nth-child(3){--hd:#0b7bc4}
+body[data-page=exam] .sp .grid>.card:nth-child(4){--hd:#3f78b9}
+body[data-page=exam] .sp .card{padding:0;overflow:hidden;border-color:#d3e0ec;box-shadow:0 2px 10px rgba(20,48,116,.05)}
+body[data-page=exam] .sp .card h3{margin:0;padding:16px 26px;background:var(--hd);color:#fff;font-size:19px;gap:12px}
+body[data-page=exam] .sp .card h3 .ic{font-size:26px;color:#fff;--acc:var(--hd)}
+body[data-page=exam] .sp .card>p,
+body[data-page=exam] .sp .card>ul,
+body[data-page=exam] .sp .card>ol{margin:24px 26px 28px}
+body[data-page=exam] .sp .card ul{list-style:none;padding:0}
+body[data-page=exam] .sp .card ul li{position:relative;padding-left:24px;margin:10px 0}
+body[data-page=exam] .sp .card ul li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--hd)}
+body[data-page=exam] .sp .card .ol li::before{background:var(--hd)}
+body[data-page=exam] .sp .card>p{line-height:1.8}
+
+/* 카카오 지도 하단 주소/전화 */
+.root_daum_roughmap .cont{padding:0!important;border:0!important;background:none!important}
+.root_daum_roughmap .cont .section{display:flex!important;flex-wrap:wrap;gap:12px 40px;margin:0!important;padding:20px 26px!important;background:var(--bg)!important;border:0!important;border-radius:0 0 6px 6px}
+.root_daum_roughmap .cont .address,.root_daum_roughmap .cont .phone{display:flex!important;align-items:center;margin:0!important;padding:0!important;float:none!important}
+.root_daum_roughmap .cont .tit{display:inline-block!important;width:auto!important;float:none!important;margin:0 12px 0 0!important;padding:3px 11px!important;background:var(--navy)!important;color:#fff!important;font-size:13px!important;font-weight:400!important;border-radius:3px}
+.root_daum_roughmap .cont .txt{display:inline!important;font-size:18px!important;font-weight:700!important;color:var(--navy)!important}
+.root_daum_roughmap .cont .phone .txt{color:var(--blue)!important}
+
+@media(max-width:900px){.ex-sum{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .ex-sum{padding:20px;gap:12px}
+  .ex-sum b{font-size:16.5px}
+  body[data-page=exam] .sp .card h3{padding:14px 20px;font-size:18px}
+  body[data-page=exam] .sp .card>p,
+  body[data-page=exam] .sp .card>ul,
+  body[data-page=exam] .sp .card>ol{margin:20px 20px 24px}
+  .root_daum_roughmap .cont .section{padding:16px 18px!important}
+}
+
+/* ===== v7: 헤더 부서명 ===== */
+.top .dept{display:flex;align-items:center;gap:14px;padding-left:20px;line-height:1.25}
+.top .dept .d-ic{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#0b8dd9,#0657a5);color:#fff;font-size:27px;--acc:#0657a5;box-shadow:0 3px 8px rgba(6,87,165,.28)}
+.top .dept b{display:block;font-size:21px;font-weight:700;color:var(--navy);letter-spacing:-.02em}
+.top .dept small{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:11.5px;font-weight:700;letter-spacing:.18em;color:#0b8dd9}
+.top .dept small::before{content:"";width:20px;height:2px;border-radius:2px;background:#0b8dd9}

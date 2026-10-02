@@ -19,6 +19,7 @@
   '<symbol id="i-shield" viewBox="0 0 48 48"><path d="M24 3l17 6v12c0 12-8 20-17 24C15 41 7 33 7 21V9z"/><path class="a" d="M16.5 24l5 5 10.5-11.5-3-3-7.5 8.5-2-2z"/></symbol>'+
   '<symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 43S5 31 5 17a9.5 9.5 0 0 1 19-4 9.5 9.5 0 0 1 19 4c0 14-19 26-19 26z"/></symbol>'+
   '<symbol id="i-live" viewBox="0 0 48 48"><rect x="4" y="7" width="40" height="29" rx="4"/><path d="M15 44h18v-3H15z"/><path class="s" d="M9 22h7l4-8 6 16 4-8h9"/></symbol>'+
+  '<symbol id="i-scan" viewBox="0 0 48 48"><rect x="4" y="6" width="40" height="31" rx="4"/><path class="a" d="M24 11 12.5 31.5a13 13 0 0 0 23 0z"/><path class="s2" d="M17 29a9 9 0 0 0 14 0M20.5 23a5 5 0 0 0 7 0"/><path d="M15 41h18v3H15z"/></symbol>'+
   '</defs></svg>';
   function ic(id){return '<svg class="ic" aria-hidden="true"><use href="#'+id+'"/></svg>';}
   var items=[['home','홈','','i-home'],['exam','검사안내','exam/','i-exam'],['prep','유의사항','prep/','i-check'],['faq','FAQ','faq/','i-faq'],['location','위치','location/','i-floor'],['directions','오시는 길','directions/','i-pin']];
@@ -27,7 +28,7 @@
   }).join('');
   var head='<div class="draft">초안(Draft) · <span class="tbc">확인 필요</span> 표시 항목은 부서 확인 후 확정해주세요</div>'+
   '<header class="top"><div class="top-in"><a href="'+(root||'./')+'"><img class="logo" src="'+root+'img/logo.png" alt="한양대학교병원"></a>'+
-  '<div class="dept"><b>영상의학과 초음파실</b>Ultrasound Room</div>'+
+  '<div class="dept"><span class="d-ic">'+ic('i-scan')+'</span><div class="d-t"><b>영상의학과 초음파실</b><small>ULTRASOUND ROOM</small></div></div>'+
   '<a class="tel" href="tel:0222908114">'+ic('i-phone')+'02-2290-8114</a></div>'+
   '<nav class="tabs" aria-label="메뉴">'+nav+'</nav></header>';
   var title=b.getAttribute('data-title');
