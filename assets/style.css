@@ -584,3 +584,9 @@ body[data-page=exam] .sp .card>p{line-height:1.8}
 @media(max-width:640px){
   .prep tr,.prep tr:nth-child(n){--hd:#143074}
 }
+
+/* ===== v17: 모바일 유의사항 카드 제목 색을 한 톤 연하게 ===== */
+@media(max-width:640px){
+  .prep tr,.prep tr:nth-child(n){--hd:#4a6fae}
+  .prep tr{border-color:#d9e3f0}
+}
