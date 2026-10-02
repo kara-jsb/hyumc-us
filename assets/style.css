@@ -606,3 +606,9 @@ body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#2f6fba}
 .top::before{content:"";display:block;height:6px;background:linear-gradient(90deg,#143074 0%,#0657a5 55%,#0b8dd9 100%)}
 nav.tabs{border-top:1px solid #e3e9f1}
 @media(max-width:640px){.top::before{height:5px}}
+
+/* ===== v21: 카드 제목 색을 조금 더 선명하게 ===== */
+body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#1f62ae}
+@media(max-width:640px){
+  .prep tr,.prep tr:nth-child(n){--hd:#1f62ae}
+}
