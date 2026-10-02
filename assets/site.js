@@ -20,6 +20,7 @@
   '<symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 43S5 31 5 17a9.5 9.5 0 0 1 19-4 9.5 9.5 0 0 1 19 4c0 14-19 26-19 26z"/></symbol>'+
   '<symbol id="i-live" viewBox="0 0 48 48"><rect x="4" y="7" width="40" height="29" rx="4"/><path d="M15 44h18v-3H15z"/><path class="s" d="M9 22h7l4-8 6 16 4-8h9"/></symbol>'+
   '<symbol id="i-scan" viewBox="0 0 48 48"><rect x="4" y="6" width="40" height="31" rx="4"/><path class="a" d="M24 11 12.5 31.5a13 13 0 0 0 23 0z"/><path class="s2" d="M17 29a9 9 0 0 0 14 0M20.5 23a5 5 0 0 0 7 0"/><path d="M15 41h18v3H15z"/></symbol>'+
+  '<symbol id="i-baby" viewBox="0 0 48 48"><circle cx="5.5" cy="27" r="3.5"/><circle cx="42.5" cy="27" r="3.5"/><circle cx="24" cy="26" r="19"/><circle class="a" cx="17" cy="26" r="2.6"/><circle class="a" cx="31" cy="26" r="2.6"/><path class="s" d="M18.5 33.5c3.2 3 7.8 3 11 0"/><path class="s" d="M19 7.5c1.2-3.2 5-4.4 7-2.2 1.2 1.3.8 3.2-.6 4"/></symbol>'+
   '</defs></svg>';
   function ic(id){return '<svg class="ic" aria-hidden="true"><use href="#'+id+'"/></svg>';}
   var items=[['home','홈','','i-home'],['exam','검사안내','exam/','i-exam'],['prep','유의사항','prep/','i-check'],['faq','FAQ','faq/','i-faq'],['location','위치','location/','i-floor'],['directions','오시는 길','directions/','i-pin']];

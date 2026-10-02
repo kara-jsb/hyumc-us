@@ -495,3 +495,6 @@ body[data-page=exam] .sp .card>p{line-height:1.8}
 .top .dept{gap:0}
 .top .dept small::before{content:none}
 .top .dept small{margin-top:2px}
+
+/* ===== v10: 모바일 헤더 부서명 숨김 복구 ===== */
+@media(max-width:640px){.top .dept{display:none}}
