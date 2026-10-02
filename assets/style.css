@@ -621,3 +621,16 @@ body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#1f62ae}
 
 /* ===== v23: 상단 포인트 바 제거 ===== */
 .top::before{content:none;display:none}
+
+/* ===== v24: 모바일 박스에 파란 톤 보강 ===== */
+@media(max-width:640px){
+  .prep tr{background:#eef6ff;border:1.5px solid #9fc4ec;box-shadow:0 3px 12px rgba(31,98,174,.12)}
+  .prep td:last-child{background:#eef6ff}
+  body[data-page=exam] .sp .card{background:#eef6ff;border:1.5px solid #9fc4ec;box-shadow:0 3px 12px rgba(31,98,174,.12)}
+  body[data-page=exam] .sp .card h3{background:var(--hd)}
+  .feat{background:#eef6ff;border:1.5px solid #b7d3f0}
+  .feat .fi{background:#fff;--acc:#fff}
+  .step{background:#eef6ff;border:1.5px solid #b7d3f0;border-top:4px solid #1f62ae}
+  .ex-sum{background:#e3f0fd}
+  .intro{background:linear-gradient(100deg,#dcecfc,#eef6ff);border-color:#9fc4ec}
+}
