@@ -673,3 +673,12 @@ nav.tabs a[aria-current=page]{background:none;border-bottom-color:var(--blue)}
   .tile .ti{border:1px solid #cfdcec;background:#f5f9fe;color:var(--blue);--acc:#f5f9fe}
   .tile:hover .ti{background:#eaf3fd;border-color:var(--blue)}
 }
+
+/* ===== v28: PC 홈도 흰 배경 + 파란 아이콘으로 반전 ===== */
+.band{background:#fff;padding:48px 0 72px}
+.band-h{color:var(--navy)}
+.infocard{border:1px solid #d9e3ef;box-shadow:0 2px 12px rgba(20,48,116,.06)}
+.tile{color:var(--navy)}
+.tile b{font-weight:700}
+.tile .ti{border:1px solid #cfdcec;background:#f5f9fe;color:var(--blue);--acc:#f5f9fe;border-radius:4px}
+.tile:hover .ti{background:#eaf3fd;border-color:var(--blue)}
