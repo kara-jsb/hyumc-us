@@ -1,0 +1,50 @@
+/* 공통 영역(아이콘·헤더·푸터) 주입. 병원 서버에서는 공통 include로 대체 가능 */
+(function(){
+  var b=document.body, root=b.getAttribute('data-root')||'', cur=b.getAttribute('data-page');
+  var sprite='<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>'+
+  '<symbol id="i-home" viewBox="0 0 48 48"><path d="M24 6 4 23h6v18h28V23h6z"/><rect class="a" x="20" y="28" width="8" height="13"/></symbol>'+
+  '<symbol id="i-exam" viewBox="0 0 48 48"><rect x="9" y="8" width="30" height="35" rx="3"/><rect class="a" x="16" y="4" width="16" height="9" rx="2"/><path class="a" d="M15 22h18v3H15zm0 8h18v3H15z"/></symbol>'+
+  '<symbol id="i-check" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"/><path class="a" d="M13 24.5l3-3 5 5 11-11.5 3 3L21 33z"/></symbol>'+
+  '<symbol id="i-faq" viewBox="0 0 48 48"><path d="M8 7h32a3 3 0 0 1 3 3v22a3 3 0 0 1-3 3H27l-9 8v-8H8a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3z"/><circle class="a" cx="15" cy="21" r="3"/><circle class="a" cx="24" cy="21" r="3"/><circle class="a" cx="33" cy="21" r="3"/></symbol>'+
+  '<symbol id="i-floor" viewBox="0 0 48 48"><path d="M24 3 3 14l21 12 21-12z"/><path class="a" d="M3 19l21 12 21-12v5L24 36 3 24z"/><path d="M3 28l21 12 21-12v5L24 45 3 33z"/></symbol>'+
+  '<symbol id="i-pin" viewBox="0 0 48 48"><path d="M24 3a14 14 0 0 0-14 14c0 10 14 28 14 28s14-18 14-28A14 14 0 0 0 24 3z"/><circle class="a" cx="24" cy="17" r="6"/></symbol>'+
+  '<symbol id="i-phone" viewBox="0 0 48 48"><path d="M13 4h8l3 11-5 3a24 24 0 0 0 11 11l3-5 11 3v8a4 4 0 0 1-4 4C22 39 9 26 9 8a4 4 0 0 1 4-4z"/></symbol>'+
+  '<symbol id="i-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"/><path class="a" d="M22 12h4v11l7 4-2 3-9-5z"/></symbol>'+
+  '<symbol id="i-subway" viewBox="0 0 48 48"><rect x="9" y="4" width="30" height="32" rx="7"/><rect class="a" x="14" y="10" width="20" height="10" rx="2"/><circle class="a" cx="17" cy="28" r="2.5"/><circle class="a" cx="31" cy="28" r="2.5"/><path d="M13 44l5-7h12l5 7h-4l-1-2H18l-1 2z"/></symbol>'+
+  '<symbol id="i-bus" viewBox="0 0 48 48"><rect x="6" y="7" width="36" height="30" rx="5"/><rect class="a" x="10" y="12" width="28" height="11"/><circle class="a" cx="15" cy="30" r="2.5"/><circle class="a" cx="33" cy="30" r="2.5"/><rect x="11" y="37" width="6" height="6"/><rect x="31" y="37" width="6" height="6"/></symbol>'+
+  '<symbol id="i-car" viewBox="0 0 48 48"><path d="M10 20l4-10h20l4 10h3a2 2 0 0 1 2 2v13H5V22a2 2 0 0 1 2-2z"/><path class="a" d="M16 14h16l2 6H14z"/><circle class="a" cx="14" cy="28" r="2.5"/><circle class="a" cx="34" cy="28" r="2.5"/></symbol>'+
+  '</defs></svg>';
+  function ic(id){return '<svg class="ic" aria-hidden="true"><use href="#'+id+'"/></svg>';}
+  var items=[['home','홈','','i-home'],['exam','검사안내','exam/','i-exam'],['prep','유의사항','prep/','i-check'],['faq','FAQ','faq/','i-faq'],['location','위치','location/','i-floor'],['directions','오시는 길','directions/','i-pin']];
+  var nav=items.map(function(i){
+    return '<a href="'+(root+i[2]||'./')+'"'+(i[0]===cur?' aria-current="page"':'')+'>'+ic(i[3])+i[1]+'</a>';
+  }).join('');
+  var head='<div class="draft">초안(Draft) · <span class="tbc">확인 필요</span> 표시 항목은 부서 확인 후 확정해주세요</div>'+
+  '<header class="top"><div class="top-in"><a href="'+(root||'./')+'"><img class="logo" src="'+root+'img/logo.png" alt="한양대학교병원"></a>'+
+  '<div class="dept"><b>영상의학과 초음파실</b>Ultrasound Room</div>'+
+  '<a class="tel" href="tel:0222908114">'+ic('i-phone')+'02-2290-8114</a></div>'+
+  '<nav class="tabs" aria-label="메뉴">'+nav+'</nav></header>';
+  var title=b.getAttribute('data-title');
+  if(title){
+    head+='<section class="pbanner"><div class="pb-in"><h2>'+title+'</h2><p>HANYANG UNIVERSITY SEOUL HOSPITAL</p></div>'+
+    '<div class="pb-bar"><div class="wrap"><a class="hm" href="'+root+'" aria-label="홈">H</a><span>초음파실 안내</span><span class="sep">›</span><span class="cur">'+title+'</span></div></div></section>';
+  }
+  var H='https://seoul.hyumc.com';
+  function links(a){return a.map(function(x){return '<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>';}).join('');}
+  var rela=[['한양대학교의료원',H+'/hyumc/'],['한양대학교구리병원','https://guri.hyumc.com/'],['한양대학교류마티스병원',H+'/rheumatism/'],['한양대학교국제병원',H+'/international/'],['한양대학교암병원',H+'/tp/cancer/'],['의학연구원','https://bri.hyumc.com/'],['인재채용','https://hyumc.recruiter.co.kr/career/home'],['장례식장','http://hyfuneral.co.kr/'],['발전기금','https://fund.hyumc.com/home/kor/main.do'],['입찰공고',H+'/board/commBoardBidList.do']];
+  var pol=[['개인정보처리방침',H+'/conts/110006000000000.do'],['환자의 권리와 의무',H+'/conts/110007000000000.do'],['회원약관',H+'/conts/110008000000000.do'],['윤리강령',H+'/conts/110009000000000.do'],['제증명 의무기록사본 발급',H+'/conts/102008002000000.do'],['비급여진료비',H+'/hospital/treatmentList.do'],['홈페이지 이용문의',H+'/board/commBoardFaqList.do']];
+  var dept=[['영상의학과',H+'/deptMenu/frtProc.do?deptNo=241'],['비뇨의학과',H+'/deptMenu/frtProc.do?deptNo=228'],['산부인과',H+'/deptMenu/frtProc.do?deptNo=229'],['한양대학교병원 홈',H+'/']];
+  var sns=[['카카오톡','https://pf.kakao.com/_WxgaRu','ft_sns02'],['페이스북','https://www.facebook.com/hyumc','ft_sns05'],['유튜브','https://www.youtube.com/HYUnivMedical','ft_sns01'],['블로그','https://blog.naver.com/hyumc-pr','ft_sns04']];
+  var foot='<footer class="ft"><div class="ft1"><div class="ft-in"><div class="rela">'+links(rela)+'</div>'+
+    '<a class="ftcall" href="tel:0222908114"><i>'+ic('i-phone')+'</i>02-2290-8114</a>'+
+    '<div class="sns">'+sns.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener"><img src="'+root+'img/'+s[2]+'.png" alt="'+s[0]+'"></a>';}).join('')+'</div></div></div>'+
+    '<div class="ft2"><div class="ft-in"><div class="ft2l"><div class="policy">'+links(pol)+'</div>'+
+    '<div class="addr2"><p>(04763) 서울특별시 성동구 왕십리로 222-1 &nbsp; TEL.<a class="tl" href="tel:0222908114">02-2290-8114</a></p><p class="cp">Copyright © 2026 Hanyang University Medical Center All right Reserved.</p></div>'+
+    '<div class="certi"><img src="'+root+'img/ft_rela01.png" alt="보건복지부 의료기관 인증"><img src="'+root+'img/ft_rela02.png" alt="의료정보시스템(EMR, OCS) 인증"></div></div>'+
+    '<div class="ft2r"><details class="ddm"><summary>진료과·센터</summary><div>'+links(dept)+'</div></details>'+
+    '<details class="ddm"><summary>관련사이트</summary><div>'+links(rela.slice(0,6))+'</div></details></div></div></div></footer>';
+  b.insertAdjacentHTML('afterbegin',sprite+head);
+  b.insertAdjacentHTML('beforeend',foot);
+  window.icon=ic;
+  document.querySelectorAll('[data-i]').forEach(function(e){e.insertAdjacentHTML('afterbegin',ic(e.getAttribute('data-i')));});
+})();
