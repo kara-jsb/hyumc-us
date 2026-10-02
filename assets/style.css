@@ -490,3 +490,8 @@ body[data-page=exam] .sp .card>p{line-height:1.8}
 .top .dept b{display:block;font-size:21px;font-weight:700;color:var(--navy);letter-spacing:-.02em}
 .top .dept small{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:11.5px;font-weight:700;letter-spacing:.18em;color:#0b8dd9}
 .top .dept small::before{content:"";width:20px;height:2px;border-radius:2px;background:#0b8dd9}
+
+/* ===== v9: 헤더 아이콘·선 제거 ===== */
+.top .dept{gap:0}
+.top .dept small::before{content:none}
+.top .dept small{margin-top:2px}
