@@ -642,3 +642,11 @@ body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#1f62ae}
   nav.tabs a:hover{background:rgba(255,255,255,.55)}
   nav.tabs a[aria-current=page]{background:#fff;border-bottom-color:var(--blue)}
 }
+
+/* ===== v26: 카드 제목은 처음 통일색(네이비), 본문(응답)은 흰 배경 ===== */
+body[data-page=exam] .sp .grid>.card:nth-child(n){--hd:#143074}
+@media(max-width:640px){
+  .prep tr,.prep tr:nth-child(n){--hd:#143074;background:#fff;border:1px solid #d3e0ec;box-shadow:0 2px 10px rgba(20,48,116,.06)}
+  .prep td:last-child{background:#fff}
+  body[data-page=exam] .sp .card{background:#fff;border:1px solid #d3e0ec;box-shadow:0 2px 10px rgba(20,48,116,.06)}
+}
