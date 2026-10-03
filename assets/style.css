@@ -915,3 +915,14 @@ body .ft details.ddm summary{border-radius:0}
 .addr>div:last-child{white-space:nowrap}
 @media(max-width:900px){.addr{grid-template-columns:1fr}.addr>div{flex-wrap:wrap}}
 @media(max-width:640px){.addr{font-size:14.5px;padding:18px}.addr b.a1{font-size:clamp(13px,4vw,15px)}.addr b.a2{font-size:16.5px}}
+
+/* ===== v43: SNS 아이콘 벡터화(선명), 주소 박스 글자 추가 축소 ===== */
+.sns{align-items:center;gap:14px}
+.sns a{display:grid;place-items:center;width:40px;height:40px}
+.sns svg{display:block;width:34px;height:34px}
+@media(max-width:640px){.sns{gap:10px}.sns a{width:34px;height:34px}.sns svg{width:30px;height:30px}}
+.addr{font-size:14px}
+.addr b.a1{font-size:14.5px}
+.addr b.a2{font-size:15.5px}
+.addr .lb{font-size:12px}
+@media(max-width:640px){.addr{font-size:13px}.addr b.a1{font-size:clamp(12px,3.6vw,13.5px)}.addr b.a2{font-size:15px}}

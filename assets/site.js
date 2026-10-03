@@ -42,10 +42,17 @@
   var rela=[['한양대학교의료원',H+'/hyumc/'],['한양대학교구리병원','https://guri.hyumc.com/'],['한양대학교류마티스병원',H+'/rheumatism/'],['한양대학교국제병원',H+'/international/'],['한양대학교암병원',H+'/tp/cancer/'],['의학연구원','https://bri.hyumc.com/'],['인재채용','https://hyumc.recruiter.co.kr/career/home'],['장례식장','http://hyfuneral.co.kr/'],['발전기금','https://fund.hyumc.com/home/kor/main.do'],['입찰공고',H+'/board/commBoardBidList.do']];
   var pol=[['개인정보처리방침',H+'/conts/110006000000000.do'],['환자의 권리와 의무',H+'/conts/110007000000000.do'],['회원약관',H+'/conts/110008000000000.do'],['윤리강령',H+'/conts/110009000000000.do'],['제증명 의무기록사본 발급',H+'/conts/102008002000000.do'],['비급여진료비',H+'/hospital/treatmentList.do'],['홈페이지 이용문의',H+'/board/commBoardFaqList.do']];
   var dept=[['영상의학과',H+'/deptMenu/frtProc.do?deptNo=241'],['비뇨의학과',H+'/deptMenu/frtProc.do?deptNo=228'],['산부인과',H+'/deptMenu/frtProc.do?deptNo=229'],['한양대학교병원 홈',H+'/']];
+  var SV='<svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true">';
+  var SNSI={
+    ft_sns02:SV+'<ellipse cx="16" cy="14" rx="13" ry="10.5" fill="#fff"/><path d="M8 21l-1.5 7 8-4.6z" fill="#fff"/><text x="16" y="17.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="8.6" fill="#2f3746">TALK</text></svg>',
+    ft_sns05:SV+'<path fill="#fff" d="M17.5 29V17.6h3.8l.6-4.4h-4.4v-2.8c0-1.3.4-2.1 2.2-2.1h2.3V4.4c-.4-.1-1.8-.2-3.4-.2-3.4 0-5.6 2-5.600 5.700v3.300H9v4.400h4V29z"/></svg>',
+    ft_sns01:SV+'<rect x="3" y="7" width="26" height="18" rx="5.5" fill="#fff"/><path d="M13.500 12v8l7-4z" fill="#2f3746"/></svg>',
+    ft_sns04:SV+'<text x="16" y="25" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="28" fill="#fff">b</text></svg>'
+  };
   var sns=[['카카오톡','https://pf.kakao.com/_WxgaRu','ft_sns02'],['페이스북','https://www.facebook.com/hyumc','ft_sns05'],['유튜브','https://www.youtube.com/HYUnivMedical','ft_sns01'],['블로그','https://blog.naver.com/hyumc-pr','ft_sns04']];
   var foot='<footer class="ft"><div class="ft1"><div class="ft-in"><div class="rela">'+links(rela)+'</div>'+
     '<a class="ftcall" href="tel:0222908114"><i>'+ic('i-phone')+'</i>02-2290-8114</a>'+
-    '<div class="sns">'+sns.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener"><img src="'+root+'img/'+s[2]+'.png" alt="'+s[0]+'"></a>';}).join('')+'</div></div></div>'+
+    '<div class="sns">'+sns.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener" aria-label="'+s[0]+'" title="'+s[0]+'">'+SNSI[s[2]]+'</a>';}).join('')+'</div></div></div>'+
     '<div class="ft2"><div class="ft-in"><div class="ft2l"><div class="policy">'+links(pol)+'</div>'+
     '<div class="addr2"><p>(04763) 서울특별시 성동구 왕십리로 222-1 &nbsp; TEL.<a class="tl" href="tel:0222908114">02-2290-8114</a></p><p class="cp">Copyright © 2026 Hanyang University Medical Center All right Reserved.</p></div>'+
     '<div class="certi"><img src="'+root+'img/ft_rela01.png" alt="보건복지부 의료기관 인증"><img src="'+root+'img/ft_rela02.png" alt="의료정보시스템(EMR, OCS) 인증"></div></div>'+
