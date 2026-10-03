@@ -68,5 +68,5 @@
   var tt=document.querySelector('.totop');
   function onScroll(){tt.classList.toggle('show',window.scrollY>300);}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  document.querySelectorAll('[data-i]').forEach(function(e){e.insertAdjacentHTML('afterbegin',ic(e.getAttribute('data-i')));});
+  window.hydrate=function(r){(r||document).querySelectorAll('[data-i]:not([data-h])').forEach(function(e){e.setAttribute('data-h','1');e.insertAdjacentHTML('afterbegin',ic(e.getAttribute('data-i')));});};window.hydrate(document);
 })();
