@@ -891,3 +891,10 @@ body[data-page=faq] .ft .ddm summary::before{content:none;display:none}
 body .ft details.ddm{border:0;border-radius:0;background:none;box-shadow:none;overflow:visible;margin:0}
 body .ft details.ddm[open]{background:none}
 body .ft details.ddm summary{border-radius:0}
+
+/* ===== v40: 단계 화살표를 카드 사이 정중앙에 ===== */
+.flow li:not(:last-child)::after{box-sizing:border-box;width:16px;height:16px;right:-23px;margin-right:-8px;top:50%;border-width:3px;transform:translate(-4px,-50%) rotate(45deg)}
+@media(max-width:900px){
+  .flow li:not(:last-child)::after{right:auto;left:50%;margin:0 0 0 -8px;top:auto;bottom:-25px;transform:translateY(-4px) rotate(135deg)}
+}
+@media(max-width:640px){ .flow li:not(:last-child)::after{bottom:-23px} }
