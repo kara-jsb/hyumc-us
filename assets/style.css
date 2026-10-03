@@ -898,3 +898,10 @@ body .ft details.ddm summary{border-radius:0}
   .flow li:not(:last-child)::after{right:auto;left:50%;margin:0 0 0 -8px;top:auto;bottom:-25px;transform:translateY(-4px) rotate(135deg)}
 }
 @media(max-width:640px){ .flow li:not(:last-child)::after{bottom:-23px} }
+
+/* ===== v41: 진료시간 평일/토요일 두 줄(모바일) ===== */
+.addr .hrs{display:inline-flex;flex-wrap:wrap;align-items:baseline}
+@media(max-width:640px){
+  .addr .hrs{display:inline-flex;flex-direction:column;gap:4px}
+  .addr .sp2{margin-left:0}
+}
