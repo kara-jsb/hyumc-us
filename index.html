@@ -4,10 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>초음파실 안내 | 한양대학교병원 영상의학과</title>
-<meta name="description" content="한양대학교병원 영상의학과 초음파실 검사 안내, 검사 전 유의사항, 위치, 오시는 길">
+<meta name="description" content="한양대학교병원 영상의학과 초음파실 검사 안내, 초음파 검사란, 검사 종류, 위치, 오시는 길">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="home" data-root="">
+
+<!-- 초음파 영상 일러스트 공통 정의 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="us-g" cx="50%" cy="0%" r="115%">
+      <stop offset="0" stop-color="#a9bfdf"/><stop offset=".4" stop-color="#5473a6"/><stop offset="1" stop-color="#1b3262"/>
+    </radialGradient>
+    <filter id="us-n" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="g"/>
+      <feBlend in="SourceGraphic" in2="g" mode="overlay"/>
+    </filter>
+    <clipPath id="us-c"><path d="M120 10 L16 120 A150 150 0 0 0 224 120 Z"/></clipPath>
+    <linearGradient id="us-red" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9482f"/><stop offset="1" stop-color="#f2a33a"/></linearGradient>
+    <linearGradient id="us-blue" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f7be0"/><stop offset="1" stop-color="#65c3f2"/></linearGradient>
+  </defs>
+</svg>
 
 <section class="hero">
   <p class="eyebrow">Department of Radiology</p>
@@ -31,6 +48,175 @@
       <a class="tile" href="directions/"><span class="ti" data-i="i-pin"></span><b>오시는 길</b></a>
       <a class="tile" href="tel:0222908114"><span class="ti" data-i="i-phone"></span><b>전화문의</b></a>
     </div>
+  </div>
+</section>
+
+<!-- 초음파 검사란? -->
+<section class="sec tint" id="about">
+  <div class="wrap">
+    <header class="sh">
+      <span class="sh-eyebrow">ABOUT ULTRASOUND</span>
+      <h2>초음파 검사란?</h2>
+      <p>사람의 귀에는 들리지 않는 높은 주파수의 음파를 몸속으로 보내고, 조직에서 되돌아오는 반사파를 영상으로 만들어 장기의 모양과 움직임을 관찰하는 검사입니다. <span class="tbc">의료진 검수 필요</span></p>
+    </header>
+
+    <ol class="flow">
+      <li>
+        <figure>
+          <svg viewBox="0 0 200 120" role="img" aria-label="탐촉자가 초음파를 몸속으로 보내는 모습">
+            <rect width="200" height="120" rx="10" fill="#fff"/>
+            <rect x="78" y="8" width="44" height="30" rx="7" fill="#143074"/>
+            <path d="M74 36h52l-6 12H80z" fill="#0657a5"/>
+            <path d="M64 62Q100 82 136 62" fill="none" stroke="#0b8dd9" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M50 79Q100 108 150 79" fill="none" stroke="#0b8dd9" stroke-width="3.5" stroke-linecap="round" opacity=".6"/>
+            <path d="M36 96Q100 134 164 96" fill="none" stroke="#0b8dd9" stroke-width="3.5" stroke-linecap="round" opacity=".32"/>
+          </svg>
+        </figure>
+        <b>① 음파 발생</b><p>탐촉자가 초음파를 몸속으로 보냅니다.</p>
+      </li>
+      <li>
+        <figure>
+          <svg viewBox="0 0 200 120" role="img" aria-label="조직의 경계에서 초음파가 반사되는 모습">
+            <rect width="200" height="120" rx="10" fill="#fff"/>
+            <rect x="16" y="26" width="168" height="22" fill="#e1ecf8"/>
+            <rect x="16" y="48" width="168" height="26" fill="#cadcf2"/>
+            <rect x="16" y="74" width="168" height="30" rx="0" fill="#b0c9e9"/>
+            <circle cx="100" cy="86" r="17" fill="#1f62ae" opacity=".8"/>
+            <path d="M80 14V84" stroke="#0657a5" stroke-width="3" stroke-linecap="round"/><path d="M73 77l7 9 7-9" fill="none" stroke="#0657a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M120 70V14" stroke="#0b8dd9" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/><path d="M113 22l7-9 7 9" fill="none" stroke="#0b8dd9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </figure>
+        <b>② 반사</b><p>조직의 경계에서 음파가 반사되어 돌아옵니다.</p>
+      </li>
+      <li>
+        <figure>
+          <svg viewBox="0 0 200 120" role="img" aria-label="반사된 신호가 영상으로 표시되는 모니터">
+            <rect width="200" height="120" rx="10" fill="#fff"/>
+            <rect x="30" y="10" width="140" height="90" rx="7" fill="#0c1b3c"/>
+            <path d="M100 20L56 72A64 64 0 0 0 144 72Z" fill="url(#us-g)" filter="url(#us-n)"/>
+            <ellipse cx="100" cy="62" rx="14" ry="9" fill="#0c1b3c" opacity=".75"/>
+            <path d="M84 108h32" stroke="#143074" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </figure>
+        <b>③ 영상화</b><p>반사된 신호가 실시간 영상으로 만들어집니다.</p>
+      </li>
+    </ol>
+
+    <ul class="traits">
+      <li><span class="tr-ic" data-i="i-shield"></span><b>방사선 없이 안전하게</b><p>방사선을 사용하지 않아 임산부와 소아도 받을 수 있고, 필요하면 반복해서 확인할 수 있습니다.</p></li>
+      <li><span class="tr-ic" data-i="i-live"></span><b>실시간으로 관찰</b><p>장기의 움직임과 혈액의 흐름을 검사 중에 바로 확인합니다.</p></li>
+      <li><span class="tr-ic" data-i="i-check"></span><b>몸에 부담이 적게</b><p>피부 위에서 시행하며, 대부분 마취나 주사 없이 진행됩니다.</p></li>
+      <li><span class="tr-ic" data-i="i-floor"></span><b>다양한 부위에 활용</b><p>복부, 갑상선, 유방, 혈관, 근골격 등 폭넓은 부위를 검사합니다.</p></li>
+    </ul>
+    <p class="about-note">장내 가스, 뼈, 복부 지방 등으로 일부 부위가 잘 보이지 않을 수 있으며, 이 경우 의료진 판단에 따라 CT·MRI 등 다른 검사를 함께 안내할 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- 초음파 검사 종류 -->
+<section class="sec" id="types">
+  <div class="wrap">
+    <header class="sh">
+      <span class="sh-eyebrow">TYPES OF EXAMINATION</span>
+      <h2>초음파 검사 종류</h2>
+      <p>검사 부위에 따라 확인하는 장기와 준비사항이 다릅니다. 카드를 누르면 자세한 안내를 볼 수 있습니다.</p>
+    </header>
+
+    <div class="types-grid">
+
+      <a class="tcard" href="exam/">
+        <svg viewBox="0 0 240 170" role="img" aria-label="복부 초음파 영상 일러스트">
+          <rect width="240" height="170" fill="#0c1b3c"/>
+          <g clip-path="url(#us-c)">
+            <rect width="240" height="170" fill="url(#us-g)" filter="url(#us-n)"/>
+            <path d="M62 72C88 46 150 48 182 78 172 112 124 124 78 108Z" fill="#9db6dd" opacity=".55" stroke="#dbe8fb" stroke-width="1.5"/>
+            <circle cx="112" cy="82" r="4.5" fill="#0c1b3c" opacity=".8"/><circle cx="134" cy="90" r="3.5" fill="#0c1b3c" opacity=".8"/>
+            <ellipse cx="156" cy="100" rx="12" ry="6.5" fill="#0c1b3c" opacity=".85"/>
+            <ellipse cx="178" cy="116" rx="15" ry="8" fill="#8aa5d2" opacity=".6" transform="rotate(-18 178 116)"/>
+          </g>
+          <text x="10" y="16" font-size="8" fill="#9bb4dc" font-family="monospace" letter-spacing="1">B-MODE</text>
+        </svg>
+        <div class="tb"><b>복부 초음파</b><p>간 · 담낭 · 췌장 · 신장</p><span class="chip2">8시간 금식</span></div>
+      </a>
+
+      <a class="tcard" href="exam/">
+        <svg viewBox="0 0 240 170" role="img" aria-label="갑상선 초음파 영상 일러스트">
+          <rect width="240" height="170" fill="#0c1b3c"/>
+          <g clip-path="url(#us-c)">
+            <rect width="240" height="170" fill="url(#us-g)" filter="url(#us-n)"/>
+            <ellipse cx="100" cy="76" rx="19" ry="30" fill="#b3c8e8" opacity=".6" transform="rotate(-10 100 76)"/>
+            <ellipse cx="140" cy="76" rx="19" ry="30" fill="#b3c8e8" opacity=".6" transform="rotate(10 140 76)"/>
+            <rect x="108" y="76" width="24" height="12" rx="5" fill="#b3c8e8" opacity=".6"/>
+            <ellipse cx="120" cy="108" rx="10" ry="8" fill="#0c1b3c" opacity=".85"/>
+            <circle cx="72" cy="86" r="7" fill="#0c1b3c" opacity=".85"/><circle cx="168" cy="86" r="7" fill="#0c1b3c" opacity=".85"/>
+            <ellipse cx="136" cy="70" rx="6" ry="4.5" fill="#0c1b3c" opacity=".7" stroke="#dbe8fb" stroke-width="1"/>
+          </g>
+          <text x="10" y="16" font-size="8" fill="#9bb4dc" font-family="monospace" letter-spacing="1">B-MODE</text>
+        </svg>
+        <div class="tb"><b>갑상선 · 경부</b><p>갑상선 · 림프절 · 침샘</p><span class="chip2 ok">준비 없음</span></div>
+      </a>
+
+      <a class="tcard" href="exam/">
+        <svg viewBox="0 0 240 170" role="img" aria-label="유방 초음파 영상 일러스트">
+          <rect width="240" height="170" fill="#0c1b3c"/>
+          <g clip-path="url(#us-c)">
+            <rect width="240" height="170" fill="url(#us-g)" filter="url(#us-n)"/>
+            <path d="M30 36Q120 28 210 36" fill="none" stroke="#e7f0fc" stroke-width="3" opacity=".8"/>
+            <ellipse cx="82" cy="70" rx="16" ry="7" fill="#0c1b3c" opacity=".5"/><ellipse cx="160" cy="64" rx="18" ry="7" fill="#0c1b3c" opacity=".5"/>
+            <ellipse cx="108" cy="104" rx="16" ry="7" fill="#0c1b3c" opacity=".45"/><ellipse cx="174" cy="98" rx="14" ry="6" fill="#0c1b3c" opacity=".45"/>
+            <ellipse cx="124" cy="82" rx="17" ry="9" fill="#0c1b3c" opacity=".88" stroke="#dbe8fb" stroke-width="1.2"/>
+            <path d="M104 100Q124 140 144 100" fill="#0c1b3c" opacity=".35"/>
+          </g>
+          <text x="10" y="16" font-size="8" fill="#9bb4dc" font-family="monospace" letter-spacing="1">B-MODE</text>
+        </svg>
+        <div class="tb"><b>유방 초음파</b><p>유방 · 겨드랑이 림프절</p><span class="chip2 ok">준비 없음</span></div>
+      </a>
+
+      <a class="tcard" href="exam/">
+        <svg viewBox="0 0 240 170" role="img" aria-label="혈관 도플러 초음파 영상 일러스트">
+          <rect width="240" height="170" fill="#0c1b3c"/>
+          <g clip-path="url(#us-c)">
+            <rect width="240" height="170" fill="url(#us-g)" filter="url(#us-n)"/>
+            <path d="M24 100C70 70 120 62 220 60L220 84C130 86 80 96 30 124Z" fill="#0c1b3c" opacity=".55"/>
+            <path d="M34 106C76 80 124 72 216 70L216 80C130 82 84 92 38 116Z" fill="url(#us-red)" opacity=".92"/>
+            <path d="M40 62C90 44 150 40 214 38L214 50C150 52 94 56 44 74Z" fill="url(#us-blue)" opacity=".9"/>
+          </g>
+          <text x="10" y="16" font-size="8" fill="#9bb4dc" font-family="monospace" letter-spacing="1">DOPPLER</text>
+        </svg>
+        <div class="tb"><b>혈관 도플러</b><p>경동맥 · 하지 혈관 혈류</p><span class="chip2">부위별 상이</span></div>
+      </a>
+
+      <a class="tcard" href="exam/">
+        <svg viewBox="0 0 240 170" role="img" aria-label="근골격 초음파 영상 일러스트">
+          <rect width="240" height="170" fill="#0c1b3c"/>
+          <g clip-path="url(#us-c)">
+            <rect width="240" height="170" fill="url(#us-g)" filter="url(#us-n)"/>
+            <g fill="none" stroke="#e1ecfb" stroke-width="2" opacity=".6" stroke-linecap="round">
+              <path d="M30 60Q120 54 214 62"/><path d="M30 70Q120 64 214 72"/><path d="M30 80Q120 74 214 82"/><path d="M30 90Q120 84 214 92"/>
+            </g>
+            <path d="M28 124Q120 104 216 122" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+            <path d="M40 134Q120 118 206 134 L206 160 L40 160Z" fill="#0c1b3c" opacity=".6"/>
+          </g>
+          <text x="10" y="16" font-size="8" fill="#9bb4dc" font-family="monospace" letter-spacing="1">B-MODE</text>
+        </svg>
+        <div class="tb"><b>근골격 초음파</b><p>힘줄 · 인대 · 관절 · 근육</p><span class="chip2 ok">준비 없음</span></div>
+      </a>
+
+      <a class="tcard" href="exam/">
+        <svg viewBox="0 0 240 170" role="img" aria-label="골반·방광 초음파 영상 일러스트">
+          <rect width="240" height="170" fill="#0c1b3c"/>
+          <g clip-path="url(#us-c)">
+            <rect width="240" height="170" fill="url(#us-g)" filter="url(#us-n)"/>
+            <ellipse cx="120" cy="86" rx="40" ry="26" fill="#0c1b3c" opacity=".92" stroke="#dbe8fb" stroke-width="1.5"/>
+            <path d="M84 110Q120 124 156 110" fill="none" stroke="#fff" stroke-width="3" opacity=".75"/>
+            <ellipse cx="120" cy="132" rx="26" ry="11" fill="#b3c8e8" opacity=".55"/>
+          </g>
+          <text x="10" y="16" font-size="8" fill="#9bb4dc" font-family="monospace" letter-spacing="1">B-MODE</text>
+        </svg>
+        <div class="tb"><b>골반 · 방광</b><p>방광 · 전립선 · 자궁 · 난소</p><span class="chip2">방광 채우기</span></div>
+      </a>
+
+    </div>
+    <p class="types-note">※ 위 그림은 초음파 영상의 이해를 돕기 위한 일러스트이며 실제 검사 영상이 아닙니다.</p>
   </div>
 </section>
 
